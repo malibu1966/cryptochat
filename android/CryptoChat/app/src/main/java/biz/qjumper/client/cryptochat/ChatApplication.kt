@@ -1,10 +1,13 @@
 package biz.qjumper.client.cryptochat
 
 import android.app.Application
-import biz.qjumper.client.cryptochat.managers.WampManager
+import android.content.Context
+import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.NavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class ChatApplication: Application() {
-    companion object {
-        val wampManager = WampManager.getInstance()
-    }
+object ChatApplication : Application() {
+    public var navController: NavController? = null
+    public var navView: BottomNavigationView? = null
+    public var activity: AppCompatActivity? = null
 }
